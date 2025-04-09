@@ -1,4 +1,4 @@
-[![xvlincaigou](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/xvlincaigou)
+[![xvlincaigou](https://img.shields.io/badge/xvlincaigou-github-blue?logo=github)](https://github.com/xvlincaigou)
 
 I'm currently pursuing a Bachelor's degree in Software Engineering at the School of Software, Tsinghua University.
 
