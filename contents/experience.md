@@ -2,8 +2,8 @@
 **January 2025 –  | Moonshot AI**  
 
 #### Key Contributions:  
-- Researched optimal data ratios in post-training RL for improving model performance on specific benchmarks.
-- Integrated latest multimodal LLM benchmarks into the company's existing parallel evaluation framework.
+- Synthesized "information chart-code" pairs to improve model performance on frontend code generation tasks.
+- Synthesized training data for model calling tools to solve STEM problems.
 
 ---
 
@@ -11,5 +11,5 @@
 **2025年1月 –  | 月之暗面**  
 
 #### 主要贡献:  
-- 研究不同数据在后训练RL训练中的最佳配比，以优化模型在某些benchmark上的性能。
-- 负责整合最新的多模态大模型benchmark，确保其顺利融入公司现有的并行测评框架。
+- 合成“信息图表-代码”对，提升模型在前端代码生成任务上的表现。
+- 合成模型调用工具解决STEM难题的训练数据。

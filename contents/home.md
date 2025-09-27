@@ -10,4 +10,4 @@ I'm currently pursuing a Bachelor's degree in Software Engineering at the School
 **Tsinghua University**, Bachelor of Software Engineering (2022 – 2026)  
 
 #### Research Interests  
-Artificial Intelligence.
+LLM Agents, RL for LLM

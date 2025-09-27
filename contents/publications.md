@@ -1,0 +1,2 @@
+- Kimi K2: Open Agentic Intelligence https://arxiv.org/abs/2507.20534
+- Pixels, Patterns, but No Poetry: To See The World like Humans：https://arxiv.org/pdf/2507.16863
