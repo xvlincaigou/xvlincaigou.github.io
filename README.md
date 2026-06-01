@@ -1,4 +1,3 @@
-# README
+# Xu Lin Homepage
 
-Homepage for Xu Lin.
-
+Static personal homepage for <https://xvlincaigou.github.io>.
