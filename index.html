@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,15 +27,26 @@
       --card: #ffffff;
       --dark: #0f172a;
       --radius: 8px;
-      --shadow: 0 1px 2px rgba(0,0,0,.06), 0 3px 10px rgba(0,0,0,.06);
-      --shadow-lg: 0 4px 14px rgba(0,0,0,.10);
+      --shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 3px 10px rgba(0, 0, 0, .06);
+      --shadow-lg: 0 4px 14px rgba(0, 0, 0, .10);
       --nav-h: 54px;
       --sidebar-w: 230px;
       --trans: .15s ease;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
     body {
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: var(--bg);
@@ -42,10 +54,27 @@
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: var(--blue); text-decoration: none; transition: color var(--trans); }
-    a:hover { color: var(--blue-mid); text-decoration: underline; text-underline-offset: 3px; }
-    img { max-width: 100%; height: auto; }
-    ul { list-style: none; }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+
+    a:hover {
+      color: var(--blue-mid);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     .anchor {
       display: block;
@@ -59,12 +88,13 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      background: rgba(255,255,255,.95);
+      background: rgba(255, 255, 255, .95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
       height: var(--nav-h);
     }
+
     .nav__inner {
       max-width: 1160px;
       margin: 0 auto;
@@ -74,6 +104,7 @@
       height: 100%;
       gap: 8px;
     }
+
     .nav__brand {
       font-size: .95rem;
       font-weight: 700;
@@ -82,8 +113,17 @@
       white-space: nowrap;
       letter-spacing: -.02em;
     }
-    .nav__brand:hover { color: var(--blue); text-decoration: none; }
-    .nav__links { display: flex; gap: 0; }
+
+    .nav__brand:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 0;
+    }
+
     .nav__links a {
       font-size: .78rem;
       font-weight: 500;
@@ -92,8 +132,17 @@
       border-bottom: 2px solid transparent;
       transition: color var(--trans), border-color var(--trans);
     }
-    .nav__links a:hover { color: var(--dark); text-decoration: none; border-bottom-color: var(--border); }
-    .nav__links a.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+    .nav__links a:hover {
+      color: var(--dark);
+      text-decoration: none;
+      border-bottom-color: var(--border);
+    }
+
+    .nav__links a.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
 
     .page {
       max-width: 1160px;
@@ -109,41 +158,53 @@
       position: sticky;
       top: calc(var(--nav-h) + 16px);
     }
+
     .profile-card {
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
+
     .profile-card__header {
       background: var(--dark);
       padding: 28px 20px 16px;
       text-align: center;
     }
+
     .profile-card__photo {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 3px solid rgba(255,255,255,.9);
-      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      border: 3px solid rgba(255, 255, 255, .9);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
       object-fit: cover;
       display: block;
       margin: 0 auto 12px;
     }
+
     .profile-card__name {
       font-size: 1.05rem;
       font-weight: 700;
       color: #fff;
       line-height: 1.3;
     }
+
     .profile-card__bio {
       font-size: .75rem;
-      color: rgba(255,255,255,.8);
+      color: rgba(255, 255, 255, .8);
       margin-top: 4px;
       line-height: 1.4;
     }
-    .profile-card__body { padding: 14px 16px 18px; }
-    .profile-meta { margin-bottom: 14px; }
+
+    .profile-card__body {
+      padding: 14px 16px 18px;
+    }
+
+    .profile-meta {
+      margin-bottom: 14px;
+    }
+
     .profile-meta li {
       display: flex;
       align-items: center;
@@ -152,11 +213,16 @@
       color: var(--text-2);
       padding: 4px 0;
     }
+
     .profile-links {
       border-top: 1px solid var(--border);
       padding-top: 12px;
     }
-    .profile-links li { margin-bottom: 2px; }
+
+    .profile-links li {
+      margin-bottom: 2px;
+    }
+
     .profile-links a {
       display: flex;
       align-items: center;
@@ -167,10 +233,23 @@
       border-radius: 6px;
       transition: background var(--trans), color var(--trans);
     }
-    .profile-links a:hover { background: var(--blue-lt); color: var(--blue); text-decoration: none; }
-    .link-icon { width: 14px; text-align: center; color: var(--text-3); }
 
-    .main { min-width: 0; }
+    .profile-links a:hover {
+      background: var(--blue-lt);
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .link-icon {
+      width: 14px;
+      text-align: center;
+      color: var(--text-3);
+    }
+
+    .main {
+      min-width: 0;
+    }
+
     .section-title {
       font-size: 1.05rem;
       font-weight: 700;
@@ -183,12 +262,29 @@
       gap: 7px;
       letter-spacing: -.01em;
     }
-    .section-title:first-child { margin-top: 0; }
-    .section-title .emoji { font-size: 1em; }
 
-    .about-text p { margin-bottom: 12px; font-size: .95rem; color: var(--text); }
-    .about-text p:last-child { margin-bottom: 0; }
-    .interests { margin-top: 14px; }
+    .section-title:first-child {
+      margin-top: 0;
+    }
+
+    .section-title .emoji {
+      font-size: 1em;
+    }
+
+    .about-text p {
+      margin-bottom: 12px;
+      font-size: .95rem;
+      color: var(--text);
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .interests {
+      margin-top: 14px;
+    }
+
     .interests h3 {
       font-size: .78rem;
       font-weight: 600;
@@ -197,6 +293,7 @@
       text-transform: uppercase;
       letter-spacing: .06em;
     }
+
     .interest-tag {
       display: inline-block;
       background: #f3f4f6;
@@ -209,7 +306,12 @@
       margin: 3px 3px 3px 0;
     }
 
-    .timeline { display: flex; flex-direction: column; gap: 16px; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
     .tl-item {
       background: var(--card);
       border: 1px solid var(--border);
@@ -220,7 +322,11 @@
       align-items: flex-start;
       transition: box-shadow var(--trans);
     }
-    .tl-item:hover { box-shadow: var(--shadow); }
+
+    .tl-item:hover {
+      box-shadow: var(--shadow);
+    }
+
     .tl-logo {
       flex: 0 0 38px;
       width: 38px;
@@ -229,7 +335,13 @@
       align-items: center;
       justify-content: center;
     }
-    .tl-logo img { max-width: 38px; max-height: 38px; object-fit: contain; }
+
+    .tl-logo img {
+      max-width: 38px;
+      max-height: 38px;
+      object-fit: contain;
+    }
+
     .tl-logo--text {
       border-radius: 8px;
       background: var(--blue-lt);
@@ -239,12 +351,18 @@
       font-weight: 800;
       letter-spacing: .01em;
     }
+
     .tl-logo--dark {
       background: #111827;
       border-color: #111827;
       color: #fff;
     }
-    .tl-body { flex: 1; min-width: 0; }
+
+    .tl-body {
+      flex: 1;
+      min-width: 0;
+    }
+
     .tl-header {
       display: flex;
       justify-content: space-between;
@@ -252,12 +370,38 @@
       gap: 8px;
       flex-wrap: wrap;
     }
-    .tl-title { font-size: .92rem; font-weight: 600; color: var(--text); }
-    .tl-date { font-size: .75rem; color: var(--text-3); white-space: nowrap; }
-    .tl-org { font-size: .82rem; color: var(--text-2); margin-top: 2px; }
-    .tl-desc { font-size: .8rem; color: var(--text-2); margin-top: 6px; line-height: 1.6; }
 
-    .pub-list { display: flex; flex-direction: column; gap: 10px; }
+    .tl-title {
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tl-date {
+      font-size: .75rem;
+      color: var(--text-3);
+      white-space: nowrap;
+    }
+
+    .tl-org {
+      font-size: .82rem;
+      color: var(--text-2);
+      margin-top: 2px;
+    }
+
+    .tl-desc {
+      font-size: .8rem;
+      color: var(--text-2);
+      margin-top: 6px;
+      line-height: 1.6;
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .pub-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -266,24 +410,50 @@
       padding: 14px 16px;
       transition: box-shadow var(--trans);
     }
-    .pub-card:hover { box-shadow: var(--shadow-lg); }
-    .pub-card.preprint { border-left-color: #7c3aed; }
+
+    .pub-card:hover {
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pub-card.preprint {
+      border-left-color: #7c3aed;
+    }
+
     .pub-title {
       font-size: .92rem;
       font-weight: 600;
       line-height: 1.5;
       margin-bottom: 5px;
     }
-    .pub-title a { color: var(--text); }
-    .pub-title a:hover { color: var(--blue); text-decoration: none; }
+
+    .pub-title a {
+      color: var(--text);
+    }
+
+    .pub-title a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
     .pub-authors {
       font-size: .8rem;
       color: var(--text-2);
       margin-bottom: 7px;
       line-height: 1.5;
     }
-    .pub-authors strong { color: var(--text); font-weight: 600; }
-    .pub-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+    .pub-authors strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .pub-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
     .venue-badge {
       font-size: .72rem;
       font-weight: 700;
@@ -291,7 +461,13 @@
       border-radius: 4px;
       white-space: nowrap;
     }
-    .venue-badge.preprint { background: #faf5ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+
+    .venue-badge.preprint {
+      background: #faf5ff;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+    }
+
     .pub-link-btn {
       font-size: .72rem;
       font-weight: 500;
@@ -305,6 +481,7 @@
       align-items: center;
       gap: 4px;
     }
+
     .pub-link-btn:hover {
       background: var(--blue-lt);
       color: var(--blue);
@@ -312,7 +489,12 @@
       border-color: #bfdbfe;
     }
 
-    .award-list { display: flex; flex-direction: column; gap: 8px; }
+    .award-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
     .award-item {
       background: var(--card);
       border: 1px solid var(--border);
@@ -324,7 +506,11 @@
       font-size: .88rem;
       transition: box-shadow var(--trans);
     }
-    .award-item:hover { box-shadow: var(--shadow); }
+
+    .award-item:hover {
+      box-shadow: var(--shadow);
+    }
+
     .award-year {
       flex: 0 0 50px;
       font-size: .75rem;
@@ -332,8 +518,16 @@
       color: var(--blue);
       text-align: center;
     }
-    .award-text { flex: 1; color: var(--text); }
-    .award-sub { font-size: .78rem; color: var(--text-3); }
+
+    .award-text {
+      flex: 1;
+      color: var(--text);
+    }
+
+    .award-sub {
+      font-size: .78rem;
+      color: var(--text-3);
+    }
 
     .contact-list li {
       display: flex;
@@ -343,8 +537,16 @@
       padding: 6px 0;
       border-bottom: 1px solid var(--border);
     }
-    .contact-list li:last-child { border-bottom: none; }
-    .contact-icon { width: 18px; color: var(--blue); text-align: center; }
+
+    .contact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      width: 18px;
+      color: var(--blue);
+      text-align: center;
+    }
 
     .service-list li {
       padding: 6px 0;
@@ -353,6 +555,7 @@
       gap: 10px;
       align-items: baseline;
     }
+
     .service-label {
       font-size: .78rem;
       font-weight: 600;
@@ -368,13 +571,31 @@
       font-size: .75rem;
       color: var(--text-3);
     }
-    .footer a { color: var(--text-3); }
-    .footer a:hover { color: var(--blue); text-decoration: none; }
+
+    .footer a {
+      color: var(--text-3);
+    }
+
+    .footer a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
 
     @media (max-width: 860px) {
-      .page { grid-template-columns: 1fr; gap: 24px; }
-      .sidebar { position: static; }
-      .profile-card { display: flex; overflow: visible; }
+      .page {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .profile-card {
+        display: flex;
+        overflow: visible;
+      }
+
       .profile-card__header {
         flex: 0 0 160px;
         padding: 20px 16px;
@@ -383,274 +604,317 @@
         flex-direction: column;
         justify-content: center;
       }
-      .profile-card__photo { width: 80px; height: 80px; margin-bottom: 8px; }
-      .profile-card__body { flex: 1; }
+
+      .profile-card__photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+      }
+
+      .profile-card__body {
+        flex: 1;
+      }
     }
+
     @media (max-width: 600px) {
-      .nav__links { display: none; }
-      .page { padding: 20px 16px 60px; }
-      .profile-card { flex-direction: column; }
-      .profile-card__header { flex: unset; border-radius: var(--radius) var(--radius) 0 0; }
-      .section-title { font-size: 1.1rem; }
-      .tl-header { flex-direction: column; gap: 2px; }
+      .nav__links {
+        display: none;
+      }
+
+      .page {
+        padding: 20px 16px 60px;
+      }
+
+      .profile-card {
+        flex-direction: column;
+      }
+
+      .profile-card__header {
+        flex: unset;
+        border-radius: var(--radius) var(--radius) 0 0;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+      }
+
+      .tl-header {
+        flex-direction: column;
+        gap: 2px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav__inner">
-    <a href="#" class="nav__brand">Xu Lin &nbsp;<span style="font-weight:300;opacity:.6;">许霖</span></a>
-    <ul class="nav__links">
-      <li><a href="#about-me">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experiences">Experience</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#honors-awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__brand">Xu Lin &nbsp;<span style="font-weight:300;opacity:.6;">许霖</span></a>
+      <ul class="nav__links">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experiences">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#honors-awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-card__header">
+          <img class="profile-card__photo" src="images/photo.png" alt="Xu Lin">
+          <div class="profile-card__name">Xu Lin<br><span style="font-weight:400;">许霖</span></div>
+          <div class="profile-card__bio">Software Engineering<br>Tsinghua University</div>
+        </div>
+        <div class="profile-card__body">
+          <ul class="profile-meta">
+            <li><span class="link-icon">⌖</span> Beijing, China</li>
+            <li><span class="link-icon">⌂</span> Tsinghua University</li>
+          </ul>
+          <ul class="profile-links">
+            <li>
+              <a href="mailto:l-xu22@mails.tsinghua.edu.cn">
+                <span class="link-icon">@</span> Tsinghua Email
+              </a>
+            </li>
+            <li>
+              <a href="mailto:xulin3212@126.com">
+                <span class="link-icon">@</span> Personal Email
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/xvlincaigou" target="_blank" rel="noopener">
+                <span class="link-icon">⌘</span> GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <span class="anchor" id="about-me"></span>
+      <h2 class="section-title"><span class="emoji">👋</span> About Me</h2>
+      <div class="about-text">
+        <p>
+          Hi! My name is <strong>Xu Lin (许霖)</strong>. I am pursuing a B.E. in Software Engineering at the
+          <a href="https://www.thss.tsinghua.edu.cn/" target="_blank" rel="noopener">School of Software</a>,
+          <a href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">Tsinghua University</a>,
+          and will continue as a master's student at Tsinghua.
+        </p>
+        <p>
+          My current interests center on LLM agents and reinforcement learning for LLMs. I have worked on
+          multimodal post-training, agentic search, evaluation infrastructure, and RL for DeepResearch-style agents.
+        </p>
+        <div class="interests">
+          <h3>Research Interests</h3>
+          <span class="interest-tag">LLM Agents</span>
+          <span class="interest-tag">RL for LLM</span>
+          <span class="interest-tag">Post-training</span>
+          <span class="interest-tag">Multimodal LLMs</span>
+          <span class="interest-tag">Evaluation Infrastructure</span>
+        </div>
+      </div>
+
+      <span class="anchor" id="education"></span>
+      <h2 class="section-title"><span class="emoji">📖</span> Education</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-logo"><img src="images/tsinghua.svg" alt="Tsinghua"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">M.E. in Software Engineering</span>
+              <span class="tl-date">2026.09 – 2028.06</span>
+            </div>
+            <div class="tl-org">School of Software, Tsinghua University</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo"><img src="images/tsinghua.svg" alt="Tsinghua"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">B.E. in Software Engineering</span>
+              <span class="tl-date">2022.08 – 2026.06</span>
+            </div>
+            <div class="tl-org">School of Software, Tsinghua University</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="anchor" id="experiences"></span>
+      <h2 class="section-title"><span class="emoji">💻</span> Experience</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-logo"><img src="images/hunyuan.svg" alt="MSRA"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">Hunyuan Team, Tencent</span>
+              <span class="tl-date">2026.06 - </span>
+            </div>
+            <div class="tl-org">Research Intern in Qingyun Talent Program</div>
+            <div class="tl-desc">Project: Coding Agent.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo"><img src="images/MS.svg" alt="MSRA"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">MSRA</span>
+              <span class="tl-date">2025.10 – 2026.03</span>
+            </div>
+            <div class="tl-org">Algorithm Intern</div>
+            <div class="tl-desc">Project: DeepResearch Agent RL.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo"><img src="images/moonshot.svg" alt="Moonshot AI"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">Moonshot AI</span>
+              <span class="tl-date">2025.01 – 2025.10</span>
+            </div>
+            <div class="tl-org">Post-training Algorithm Intern</div>
+            <div class="tl-desc">Projects: Chart2Code; Agentic Search; Visual Game; Evaluation Infrastructure.</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="anchor" id="publications"></span>
+      <h2 class="section-title"><span class="emoji">📝</span> Publications</h2>
+      <div class="pub-list">
+        <div class="pub-card preprint">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2602.02276" target="_blank" rel="noopener">
+              Kimi K2.5: Visual Agentic Intelligence
+            </a>
+          </div>
+          <div class="pub-footer">
+            <span class="venue-badge preprint">Preprint</span>
+            <a href="https://arxiv.org/abs/2602.02276" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
+          </div>
+        </div>
+        <div class="pub-card preprint">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2507.20534" target="_blank" rel="noopener">
+              Kimi K2: Open Agentic Intelligence
+            </a>
+          </div>
+          <div class="pub-footer">
+            <span class="venue-badge preprint">Preprint</span>
+            <a href="https://arxiv.org/abs/2507.20534" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
+          </div>
+        </div>
+        <div class="pub-card preprint">
+          <div class="pub-title">
+            <a href="https://arxiv.org/abs/2507.16863" target="_blank" rel="noopener">
+              Pixels, Patterns, but No Poetry: To See The World like Humans
+            </a>
+          </div>
+          <div class="pub-authors">Third author: <strong>Xu Lin</strong></div>
+          <div class="pub-footer">
+            <span class="venue-badge preprint">Preprint</span>
+            <a href="https://arxiv.org/abs/2507.16863" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <span class="anchor" id="projects"></span>
+      <h2 class="section-title"><span class="emoji">🛠</span> Technical Work</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-logo tl-logo--text">RL</div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">RL Infrastructure</span>
+            </div>
+            <div class="tl-desc">
+              Familiar with <code>verl</code> and <code>slime</code>; contributed merged PRs to <code>verl</code> and
+              <code>SGLang</code>.
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-logo tl-logo--text">CLI</div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <span class="tl-title">caigode</span>
+            </div>
+            <div class="tl-desc">
+              A coding agent built with harness engineering methods from
+              <a href="https://github.com/xvlincaigou/codex-harness-template" target="_blank"
+                rel="noopener">codex-harness-template</a>.
+              <a href="https://github.com/xvlincaigou/caigode/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="anchor" id="honors-awards"></span>
+      <h2 class="section-title"><span class="emoji">🏆</span> Honors &amp; Awards</h2>
+      <div class="award-list">
+        <div class="award-item">
+          <div class="award-year">2024</div>
+          <div>
+            <div class="award-text"><strong>University Scholarship</strong></div>
+            <div class="award-sub">校级奖学金</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div>
+            <div class="award-text"><strong>University Scholarship</strong></div>
+            <div class="award-sub">校级奖学金</div>
+          </div>
+        </div>
+      </div>
+
+      <span class="anchor" id="contact"></span>
+      <h2 class="section-title"><span class="emoji">📬</span> Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon">@</span>
+          <a href="mailto:l-xu22@mails.tsinghua.edu.cn">l-xu22@mails.tsinghua.edu.cn</a>
+        </li>
+        <li>
+          <span class="contact-icon">@</span>
+          <a href="mailto:xulin3212@126.com">xulin3212@126.com</a>
+        </li>
+        <li>
+          <span class="contact-icon">⌘</span>
+          <a href="https://github.com/xvlincaigou" target="_blank" rel="noopener">github.com/xvlincaigou</a>
+        </li>
+      </ul>
+    </main>
   </div>
-</nav>
 
-<div class="page">
-  <aside class="sidebar">
-    <div class="profile-card">
-      <div class="profile-card__header">
-        <img class="profile-card__photo" src="images/photo.png" alt="Xu Lin">
-        <div class="profile-card__name">Xu Lin<br><span style="font-weight:400;">许霖</span></div>
-        <div class="profile-card__bio">Software Engineering<br>Tsinghua University</div>
-      </div>
-      <div class="profile-card__body">
-        <ul class="profile-meta">
-          <li><span class="link-icon">⌖</span> Beijing, China</li>
-          <li><span class="link-icon">⌂</span> Tsinghua University</li>
-        </ul>
-        <ul class="profile-links">
-          <li>
-            <a href="mailto:l-xu22@mails.tsinghua.edu.cn">
-              <span class="link-icon">@</span> Tsinghua Email
-            </a>
-          </li>
-          <li>
-            <a href="mailto:xulin3212@126.com">
-              <span class="link-icon">@</span> Personal Email
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/xvlincaigou" target="_blank" rel="noopener">
-              <span class="link-icon">⌘</span> GitHub
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
+  <footer class="footer">
+    <p>© 2026 Xu Lin &nbsp;·&nbsp;
+      <a href="https://xvlincaigou.github.io">xvlincaigou.github.io</a>
+    </p>
+  </footer>
 
-  <main class="main">
-    <span class="anchor" id="about-me"></span>
-    <h2 class="section-title"><span class="emoji">👋</span> About Me</h2>
-    <div class="about-text">
-      <p>
-        Hi! My name is <strong>Xu Lin (许霖)</strong>. I am pursuing a B.E. in Software Engineering at the
-        <a href="https://www.thss.tsinghua.edu.cn/" target="_blank" rel="noopener">School of Software</a>,
-        <a href="https://www.tsinghua.edu.cn/" target="_blank" rel="noopener">Tsinghua University</a>,
-        and will continue as a master's student at Tsinghua.
-      </p>
-      <p>
-        My current interests center on LLM agents and reinforcement learning for LLMs. I have worked on
-        multimodal post-training, agentic search, evaluation infrastructure, and RL for DeepResearch-style agents.
-      </p>
-      <div class="interests">
-        <h3>Research Interests</h3>
-        <span class="interest-tag">LLM Agents</span>
-        <span class="interest-tag">RL for LLM</span>
-        <span class="interest-tag">Post-training</span>
-        <span class="interest-tag">Multimodal LLMs</span>
-        <span class="interest-tag">Evaluation Infrastructure</span>
-      </div>
-    </div>
-
-    <span class="anchor" id="education"></span>
-    <h2 class="section-title"><span class="emoji">📖</span> Education</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-logo"><img src="images/tsinghua.svg" alt="Tsinghua"></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">M.E. in Software Engineering</span>
-            <span class="tl-date">2026.09 – 2028.06</span>
-          </div>
-          <div class="tl-org">School of Software, Tsinghua University</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-logo"><img src="images/tsinghua.svg" alt="Tsinghua"></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">B.E. in Software Engineering</span>
-            <span class="tl-date">2022.08 – 2026.06</span>
-          </div>
-          <div class="tl-org">School of Software, Tsinghua University</div>
-        </div>
-      </div>
-    </div>
-
-    <span class="anchor" id="experiences"></span>
-    <h2 class="section-title"><span class="emoji">💻</span> Experience</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-logo"><img src="images/MS.svg" alt="MSRA"></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">MSRA</span>
-            <span class="tl-date">2025.10 – 2026.03</span>
-          </div>
-          <div class="tl-org">Algorithm Intern</div>
-          <div class="tl-desc">Project: DeepResearch Agent RL.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-logo"><img src="images/moonshot.svg" alt="Moonshot AI"></div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">Moonshot AI</span>
-            <span class="tl-date">2025.01 – 2025.10</span>
-          </div>
-          <div class="tl-org">Post-training Algorithm Intern</div>
-          <div class="tl-desc">Projects: Chart2Code; Agentic Search; Visual Game; Evaluation Infrastructure.</div>
-        </div>
-      </div>
-    </div>
-
-    <span class="anchor" id="publications"></span>
-    <h2 class="section-title"><span class="emoji">📝</span> Publications</h2>
-    <div class="pub-list">
-      <div class="pub-card preprint">
-        <div class="pub-title">
-          <a href="https://arxiv.org/abs/2602.02276" target="_blank" rel="noopener">
-            Kimi K2.5: Visual Agentic Intelligence
-          </a>
-        </div>
-        <div class="pub-footer">
-          <span class="venue-badge preprint">Preprint</span>
-          <a href="https://arxiv.org/abs/2602.02276" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
-        </div>
-      </div>
-      <div class="pub-card preprint">
-        <div class="pub-title">
-          <a href="https://arxiv.org/abs/2507.20534" target="_blank" rel="noopener">
-            Kimi K2: Open Agentic Intelligence
-          </a>
-        </div>
-        <div class="pub-footer">
-          <span class="venue-badge preprint">Preprint</span>
-          <a href="https://arxiv.org/abs/2507.20534" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
-        </div>
-      </div>
-      <div class="pub-card preprint">
-        <div class="pub-title">
-          <a href="https://arxiv.org/abs/2507.16863" target="_blank" rel="noopener">
-            Pixels, Patterns, but No Poetry: To See The World like Humans
-          </a>
-        </div>
-        <div class="pub-authors">Third author: <strong>Xu Lin</strong></div>
-        <div class="pub-footer">
-          <span class="venue-badge preprint">Preprint</span>
-          <a href="https://arxiv.org/abs/2507.16863" class="pub-link-btn" target="_blank" rel="noopener">arXiv</a>
-        </div>
-      </div>
-    </div>
-
-    <span class="anchor" id="projects"></span>
-    <h2 class="section-title"><span class="emoji">🛠</span> Technical Work</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-logo tl-logo--text">RL</div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">RL Infrastructure</span>
-          </div>
-          <div class="tl-desc">
-            Familiar with <code>verl</code> and <code>slime</code>; contributed merged PRs to <code>verl</code> and <code>SGLang</code>.
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-logo tl-logo--text">CLI</div>
-        <div class="tl-body">
-          <div class="tl-header">
-            <span class="tl-title">caigode</span>
-          </div>
-          <div class="tl-desc">
-            A coding agent built with harness engineering methods from
-            <a href="https://github.com/xvlincaigou/codex-harness-template" target="_blank" rel="noopener">codex-harness-template</a>.
-            <a href="https://github.com/xvlincaigou/caigode/" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <span class="anchor" id="honors-awards"></span>
-    <h2 class="section-title"><span class="emoji">🏆</span> Honors &amp; Awards</h2>
-    <div class="award-list">
-      <div class="award-item">
-        <div class="award-year">2024</div>
-        <div>
-          <div class="award-text"><strong>University Scholarship</strong></div>
-          <div class="award-sub">校级奖学金</div>
-        </div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2023</div>
-        <div>
-          <div class="award-text"><strong>University Scholarship</strong></div>
-          <div class="award-sub">校级奖学金</div>
-        </div>
-      </div>
-    </div>
-
-    <span class="anchor" id="contact"></span>
-    <h2 class="section-title"><span class="emoji">📬</span> Contact</h2>
-    <ul class="contact-list">
-      <li>
-        <span class="contact-icon">@</span>
-        <a href="mailto:l-xu22@mails.tsinghua.edu.cn">l-xu22@mails.tsinghua.edu.cn</a>
-      </li>
-      <li>
-        <span class="contact-icon">@</span>
-        <a href="mailto:xulin3212@126.com">xulin3212@126.com</a>
-      </li>
-      <li>
-        <span class="contact-icon">⌘</span>
-        <a href="https://github.com/xvlincaigou" target="_blank" rel="noopener">github.com/xvlincaigou</a>
-      </li>
-    </ul>
-  </main>
-</div>
-
-<footer class="footer">
-  <p>© 2026 Xu Lin &nbsp;·&nbsp;
-    <a href="https://xvlincaigou.github.io">xvlincaigou.github.io</a>
-  </p>
-</footer>
-
-<script>
-(function () {
-  const sections = document.querySelectorAll('.anchor[id]');
-  const navLinks = document.querySelectorAll('.nav__links a');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => link.classList.remove('active'));
-        const active = document.querySelector(`.nav__links a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -75% 0px' });
-  sections.forEach((section) => io.observe(section));
-})();
-</script>
+  <script>
+    (function () {
+      const sections = document.querySelectorAll('.anchor[id]');
+      const navLinks = document.querySelectorAll('.nav__links a');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => link.classList.remove('active'));
+            const active = document.querySelector(`.nav__links a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -75% 0px' });
+      sections.forEach((section) => io.observe(section));
+    })();
+  </script>
 
 </body>
+
 </html>
